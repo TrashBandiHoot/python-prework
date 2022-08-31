@@ -1,5 +1,7 @@
-
-#! Figure out if else statement is necessary. Will it return False without it? or would it be null/void/none and is that funionally the same.
+# QUESTION 4
+# Write a function to return if the given year is a leap year. 
+# A leap year is divisible by 4, but not divisible by 100, unless it is also divisible by 400. 
+# The return should be boolean Type (true/false).
 
 
 def is_leap_year(a_year):

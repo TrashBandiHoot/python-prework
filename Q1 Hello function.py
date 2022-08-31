@@ -1,16 +1,5 @@
-
-# First thought was to do something like this
-
-"""
-user_name = input("What is your name?: ")
-
-def hello_name(user_name):
-    print(f"Hello, {user_name}")
-
-hello_name(user_name)
-"""
-
-# After thinking about it for a moment I figured this was probably a better solution.
+# QUESTION 1
+# Write a function to print "hello_USERNAME!" USERNAME is the input of the function.
 
 def hello_name(user_name):
     print(f"Hello, {user_name}")

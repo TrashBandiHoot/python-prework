@@ -1,3 +1,8 @@
+# QUESTION 3
+# Please write a Python function, max_num_in_list to return the max number of a given list. 
+# The first line of the code has been defined as below.
+
+
 nums = [1, 2, 94, 42, 82, 12, 21, 77, 101, 65, -1, 999]
 
 #* With max()
