@@ -1,5 +1,6 @@
 
-#! QUESTION 1
+# QUESTION 1
+# Write a function to print "hello_USERNAME!" USERNAME is the input of the function.
 
 # First thought was to do something like this
 
@@ -20,7 +21,8 @@ def hello_name(user_name):
 hello_name(input("What is your name?: "))
 
 
-#! QUESTION 2
+# QUESTION 2
+# Write a python function, first_odds that prints the odd numbers from 1-100 and returns nothing
 
 def first_odds():
     for x in range(1, 100):
@@ -31,7 +33,9 @@ def first_odds():
 first_odds()
 
 
-#! QUESTION 3
+# QUESTION 3
+# Please write a Python function, max_num_in_list to return the max number of a given list. 
+# The first line of the code has been defined as below.
 
 
 nums = [1, 2, 94, 42, 82, 12, 21, 77, 101, 65, -1, 999]
@@ -59,7 +63,10 @@ def max_num_in_list(a_list):
 max_num_in_list(list)
 
 
-#! QUESTION 4
+# QUESTION 4
+# Write a function to return if the given year is a leap year. 
+# A leap year is divisible by 4, but not divisible by 100, unless it is also divisible by 400. 
+# The return should be boolean Type (true/false).
 
 def is_leap_year(a_year):
     if a_year % 100 and a_year % 400 == 0:
@@ -77,32 +84,40 @@ year = int(input("Please enter a year: "))
 is_leap_year(a_year=year)
 
 
-#! QUESTION 5
+# QUESTION 5
+# Write a function to check to see if all numbers in list are consecutive numbers. 
+# For example, [2,3,4,5,6,7] are consecutive numbers, but [1,2,4,5] are not consecutive numbers. 
+# The return should be boolean Type.
 
 list1 = [1, 2, 3, 4, 5]
 list2 = [5, 4, 3, 2, 1]
 list3 = [1, 3, 5, 7, 9]
+list4 = [2, 3, 4, 5, 6]
+
+def in_order(a_list):
+    """Checks whether the numbers are ascending/descending"""
+    if a_list == sorted(a_list) or a_list == sorted(a_list, reverse=True):
+        return sorted(a_list)
+    else:
+        return False
 
 
-#! This doesn't work, remember to save your work and stop doing homework when you are sleep deprived.
+def is_consecutive(ordered_list):
+    new_list = []
+    index = 0
+    int_a = ordered_list[index]
+    int_b = ordered_list[index + 1]
+    count = 1
+    while index < len(ordered_list):
+        for num in ordered_list:
+            index += 1
+            count += 1
+            if int_b == int_a + 1:
+                new_list.append(num)
+    if new_list == ordered_list:
+        return True
+    else:
+        return False
+        
 
-def is_consectutive(a_list):
-    check_ascending = a_list[0]
-    check_descending = a_list[0]
-    for x in a_list:
-        if x == check_ascending:
-            check_ascending += 1
-            # print("works")
-            order = "ascending"
-        if x == check_descending:
-            check_descending -= 1
-            # print("works")
-            order = "descending"
-        else:
-            return "This list is not consecutive"
-            
-    return order
-
-
-
-print(is_consectutive(list2))
+print(is_consecutive(in_order(list1)))
