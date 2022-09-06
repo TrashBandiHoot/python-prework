@@ -28,7 +28,6 @@ def first_odds():
     for x in range(1, 100):
         if x % 2 == 1:
             print(x)
-    return
 
 first_odds()
 
@@ -69,7 +68,7 @@ max_num_in_list(list)
 # The return should be boolean Type (true/false).
 
 def is_leap_year(a_year):
-    if a_year % 100 and a_year % 400 == 0:
+    if a_year % 100 == 0 and a_year % 400 == 0:
         print("leapyear")
         return True
     elif a_year % 4 == 0:
