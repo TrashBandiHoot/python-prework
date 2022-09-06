@@ -5,7 +5,7 @@
 
 
 def is_leap_year(a_year):
-    if a_year % 100 and a_year % 400 == 0:
+    if a_year % 100 == 0 and a_year % 400 == 0:
         print("leapyear")
         return True
     elif a_year % 4 == 0:
